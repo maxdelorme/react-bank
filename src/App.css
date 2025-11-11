@@ -2,6 +2,7 @@
 :root {
   --header-height: 80px;
   --button-height: 20px;
+  font-size: clamp(10px, 2.5vw, 18px);
 }
 #root {
   margin: 0 auto;
@@ -27,12 +28,12 @@ header {
   }
 
   .logo {
-    font-size: 30px;
+    font-size: 2.3rem;
     font-weight: 300;
   }
 
   .User {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 300;
     display: flex;
     align-items: center;
@@ -40,7 +41,7 @@ header {
     .avatar {
       background-color: white;
       color: black;
-      font-size: 20px;
+      font-size: 1.5rem;
       border-radius: 50%;
     }
   }
@@ -61,7 +62,7 @@ header {
       width: 100%;
       display: flex;
       color: white;
-      font-size: 20px;
+      font-size: 1.5rem;
       justify-content: space-between;
       box-shadow: 5px 5px 5px lightgray;
       border-radius: 5px;
@@ -121,24 +122,16 @@ header {
   header {
     --header-height: 100px;
     .logo {
-      font-size: 50px;
       font-weight: 300;
     }
 
     .User {
-      font-size: 40px;
       font-weight: 300;
       gap: 30px;
-      .avatar {
-        font-size: 40px;
-      }
     }
   }
   .main {
     .account {
-      .header {
-        font-size: 30px;
-      }
       .operations {
         width: calc(100% - 100px);
         .operation {

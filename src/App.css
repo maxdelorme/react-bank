@@ -1,0 +1,143 @@
+@import "./assets/css/fonts.css";
+:root {
+  --header-height: 80px;
+  --button-height: 20px;
+}
+#root {
+  margin: 0 auto;
+  text-align: center;
+  background-color: #eceff1;
+  height: 100vh;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  display: flex;
+}
+header {
+  background-color: black;
+  height: var(--header-height);
+  color: white;
+
+  & .container {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    height: 100%;
+  }
+
+  .logo {
+    font-size: 30px;
+    font-weight: 300;
+  }
+
+  .User {
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .avatar {
+      background-color: white;
+      color: black;
+      font-size: 20px;
+      border-radius: 50%;
+    }
+  }
+}
+.main {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .account {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+      z-index: 10;
+      width: 100%;
+      display: flex;
+      color: white;
+      font-size: 20px;
+      justify-content: space-between;
+      box-shadow: 5px 5px 5px lightgray;
+      border-radius: 5px;
+      padding: 20px;
+    }
+    .operations {
+      width: calc(100% - 50px);
+
+      .operation {
+        display: flex;
+        gap: 5px;
+        min-height: 30px;
+        align-items: center;
+        padding: 10px;
+
+        &:nth-child(2n) {
+          background-color: #ffffff;
+        }
+        &:nth-child(2n + 1) {
+          background-color: #f7f7f7;
+        }
+        .date {
+          color: rgb(151, 151, 151);
+          width: 120px;
+        }
+        .description {
+          margin-right: auto;
+        }
+        .amount {
+          font-family: monospace;
+        }
+      }
+      .buttonLine {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        background-color: #f7f7f7;
+        height: var(--button-height);
+        border-radius: calc(var(--button-height) / 2);
+        padding: 20px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media (width > 768px) {
+  header {
+    --header-height: 100px;
+    .logo {
+      font-size: 50px;
+      font-weight: 300;
+    }
+
+    .User {
+      font-size: 40px;
+      font-weight: 300;
+      gap: 30px;
+      .avatar {
+        font-size: 40px;
+      }
+    }
+  }
+  .main {
+    .account {
+      .header {
+        font-size: 30px;
+      }
+      .operations {
+        width: calc(100% - 100px);
+      }
+    }
+  }
+}

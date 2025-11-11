@@ -1,6 +1,6 @@
 @import "./assets/css/fonts.css";
 :root {
-  --header-height: 80px;
+  --header-height: 6rem;
   --button-height: 20px;
   font-size: clamp(10px, 2.5vw, 18px);
 }
@@ -37,7 +37,7 @@ header {
     font-weight: 300;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
     .avatar {
       background-color: white;
       color: black;
@@ -69,7 +69,7 @@ header {
       padding: 20px;
     }
     .operations {
-      width: calc(100% - 50px);
+      width: calc(100% - 4.7rem);
 
       .operation {
         display: flex;
@@ -119,21 +119,9 @@ header {
 }
 
 @media (width > 768px) {
-  header {
-    --header-height: 100px;
-    .logo {
-      font-weight: 300;
-    }
-
-    .User {
-      font-weight: 300;
-      gap: 30px;
-    }
-  }
   .main {
     .account {
       .operations {
-        width: calc(100% - 100px);
         .operation {
           .date {
             width: 100px;

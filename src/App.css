@@ -76,6 +76,8 @@ header {
         min-height: 30px;
         align-items: center;
         padding: 10px;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
         &:nth-child(2n) {
           background-color: #ffffff;
@@ -85,10 +87,12 @@ header {
         }
         .date {
           color: rgb(151, 151, 151);
-          width: 120px;
+          width: 100%;
+          text-align: left;
         }
         .description {
           margin-right: auto;
+          text-wrap: nowrap;
         }
         .amount {
           font-family: monospace;
@@ -137,6 +141,11 @@ header {
       }
       .operations {
         width: calc(100% - 100px);
+        .operation {
+          .date {
+            width: 100px;
+          }
+        }
       }
     }
   }

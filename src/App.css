@@ -9,6 +9,7 @@
   text-align: center;
   background-color: #eceff1;
   height: 100vh;
+  overflow: scroll;
 }
 .container {
   margin: 0 auto;
@@ -19,6 +20,9 @@ header {
   background-color: black;
   height: var(--header-height);
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 30;
 
   & .container {
     align-items: center;
@@ -67,6 +71,8 @@ header {
       box-shadow: 5px 5px 5px lightgray;
       border-radius: 5px;
       padding: 20px;
+      position: sticky;
+      top: var(--header-height);
     }
     .operations {
       width: calc(100% - 4.7rem);

@@ -1,5 +1,5 @@
 const Logo = (props) => {
-  return <div className="logo">My Bank</div>;
+  return <div className="font-light text-4xl">My Bank</div>;
 };
 
 export default Logo;

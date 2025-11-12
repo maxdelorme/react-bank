@@ -7,10 +7,8 @@ function App() {
   return (
     <>
       <Header userName="Etienne"></Header>
-      <div className="main">
-        <div className="container">
-          <Accounts accounts={dataAccounts}></Accounts>
-        </div>
+      <div className="m-auto max-w-4xl flex flex-col p-4 items-stretch">
+        <Accounts accounts={dataAccounts}></Accounts>
       </div>
     </>
   );
